@@ -2,15 +2,24 @@
   <div class="main-layout">
     <div class="main-layout__wrap">
       <heading text="Find your music match" counter="1"></heading>
+      <search-form @form-submit="onSearchFormSubmit"></search-form>
     </div>
   </div>
 </template>
 
 <script>
 import Heading from './components/Heading.vue';
+import SearchForm from './components/SearchForm.vue';
+
 export default {
   components: {
     Heading,
+    SearchForm,
+  },
+  methods: {
+    onSearchFormSubmit(artist) {
+      console.log(artist);
+    },
   },
 };
 </script>
